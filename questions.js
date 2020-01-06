@@ -43,7 +43,7 @@ function displayQuestion() {
     $('.question').text("Question: "+questions[currentQuestion].title);
         for (var x=0; x<questions[currentQuestion].choices.length; x++) 
         {
-            $('<button/>', {id: x, text: questions[currentQuestion].choices[x]}).appendTo('.choiceList');
+            $('<button/>', {id: x, text: questions[currentQuestion].choices[x], class: "btn btn-outline-primary ml-3"}).appendTo('.choiceList');
         }
         checkAnswer();
 }
@@ -76,6 +76,7 @@ function checkQuestion() {
     }
 }
 function displayResult() {
+    timeLeft=0;
     $('.question').hide();
     $('.choiceList').hide();
     $('#timer').hide();
@@ -91,7 +92,7 @@ function submitResult() {
     var userName = document.querySelector('#exampleFormControlTextarea1').value;
     localStorage.setItem('Name', userName);
     console.log(userName);
-    var x = document.createElement("LI");
+    var x = document.createElement("li");
   var t = document.createTextNode(userName + ' Scored ' + correctAnswers + ' out of 5.');
   x.appendChild(t);
   document.getElementById("Ranking").appendChild(x);
