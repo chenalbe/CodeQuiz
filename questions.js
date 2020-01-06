@@ -10,19 +10,19 @@ var questions = [
       answer: "parentheses"
     },
     {
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        answer: "parentheses"
+        title: "What is the HTML tag under which one can write the JavaScript code?",
+        choices: ["<javascript>", " <script>", "<scripted>", "<js>"],
+        answer: " <script>"
       },
       {
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        answer: "parentheses"
+        title: "Which of the following is not a reserved word in JavaScript?",
+        choices: ["interface", "throws", "short", "program"],
+        answer: "program"
       },
       {
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        answer: "parentheses"
+        title: "What is the JavaScript syntax for printing values in Console?",
+        choices: ["console.print(5);", "console.log(5);", "print.console(5);", "print(5)"],
+        answer: "console.log(5);"
       },
   ];
 
