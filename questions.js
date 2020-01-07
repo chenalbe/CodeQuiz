@@ -90,10 +90,18 @@ function submitResult() {
     $('.form-group').hide();
     $('.result').hide();
     var userName = document.querySelector('#exampleFormControlTextarea1').value;
-    localStorage.setItem('Name', userName);
-    console.log(userName);
+    var userResult = {
+        Name: document.querySelector('#exampleFormControlTextarea1').value.trim(),
+        Score: correctAnswers
+    };
+    localStorage.setItem('user', userResult);
+    var userInput = JSON.stringify(userResult);
+    console.log(userInput);
+    localStorage.setItem('user', userInput);
+    var lastUser = JSON.parse(localStorage.getItem('user'));
+    console.log(lastUser.Name + lastUser.Score)
     var x = document.createElement("li");
-  var t = document.createTextNode(userName + ' Scored ' + correctAnswers + ' out of 5.');
+  var t = document.createTextNode(lastUser.Name + ' Scored ' + lastUser.Score + ' out of 5.');
   x.appendChild(t);
   document.getElementById("Ranking").appendChild(x);
 }
